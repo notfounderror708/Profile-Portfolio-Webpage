@@ -1,0 +1,180 @@
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #0d1b2a;
+      color: #e6f1ff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background-color: #0d1b2a;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    nav .logo { font-size: 22px; font-weight: bold; }
+    nav .logo span { color: #e8445a; }
+    nav a { color: #e6f1ff; text-decoration: none; margin-left: 25px; font-size: 15px; }
+    nav a:hover { color: #e8445a; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #112240;
+    }
+    .hero img {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e8445a;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: 36px; margin-bottom: 10px; }
+    .hero h1 span { color: #e8445a; }
+    .hero p { color: #8892a0; font-size: 16px; margin-bottom: 30px; }
+    .hero-buttons { display: flex; gap: 15px; }
+
+    .btn-red {
+      background-color: #e8445a; color: white;
+      padding: 10px 25px; border: none; border-radius: 5px;
+      font-size: 15px; cursor: pointer; text-decoration: none;
+    }
+    .btn-red:hover { background-color: #ff6b7a; }
+
+    .btn-outline {
+      background-color: transparent; color: white;
+      padding: 10px 25px; border: 2px solid white;
+      border-radius: 5px; font-size: 15px; cursor: pointer; text-decoration: none;
+    }
+    .btn-outline:hover { border-color: #e8445a; color: #e8445a; }
+
+  
+    section { padding: 70px 40px; max-width: 900px; margin: 0 auto; }
+    h2 { font-size: 28px; color: #e8445a; margin-bottom: 10px; text-align: center; }
+    .underline { width: 50px; height: 3px; background-color: #e8445a; margin: 0 auto 30px auto; border-radius: 3px; }
+
+    #about { background-color: #112240; max-width: 100%; padding: 70px 20%; }
+    #about p { color: #ccd6f6; line-height: 1.8; margin-bottom: 12px; font-size: 15px; }
+    #about .contact-info { margin-top: 20px; color: #8892a0; font-size: 14px; line-height: 2; }
+
+    .skill { margin-bottom: 18px; }
+    .skill-top { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 14px; }
+    .skill-bar-bg { background-color: #1a2f4a; height: 8px; border-radius: 5px; }
+    .skill-bar { background-color: #e8445a; height: 8px; border-radius: 5px; }
+
+    #projects { background-color: #112240; max-width: 100%; padding: 70px 15%; text-align: center; }
+
+    .pathways { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+    .pathway-btn {
+      background-color: #1a2f4a; border: 2px solid #e8445a; color: #e6f1ff;
+      padding: 30px 50px; border-radius: 10px; font-size: 18px; font-weight: bold;
+      cursor: pointer; width: 220px; transition: background-color 0.2s;
+    }
+    .pathway-btn:hover { background-color: #e8445a; }
+    .pathway-btn p { font-size: 13px; font-weight: normal; color: #8892a0; margin-top: 8px; }
+    .pathway-btn:hover p { color: white; }
+
+    .project-list { display: none; text-align: left; }
+    .project-list.show { display: block; }
+
+    .project-list-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+
+    .back-btn {
+      background: transparent; border: 1px solid #8892a0; color: #8892a0;
+      padding: 6px 14px; border-radius: 5px; cursor: pointer; font-size: 13px;
+    }
+    .back-btn:hover { border-color: white; color: white; }
+
+    .section-label {
+      font-size: 13px; color: #e8445a;
+      border: 1px solid #e8445a; padding: 4px 12px; border-radius: 20px;
+    }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+
+    .card {
+      background-color: #1a2f4a; border: 1px solid #1e3a5f;
+      border-radius: 8px; padding: 20px;
+    }
+    .card:hover { border-color: #e8445a; }
+    .card h3 { font-size: 17px; margin-bottom: 10px; }
+    .card p { font-size: 13px; color: #8892a0; line-height: 1.6; margin-bottom: 15px; }
+    .card .tags { margin-bottom: 15px; }
+    .card .tags span {
+      font-size: 11px; color: #e8445a; border: 1px solid #e8445a;
+      padding: 2px 8px; border-radius: 4px; margin-right: 5px;
+    }
+    .card button {
+      display: inline-block; background-color: #e8445a; color: white;
+      border: none; padding: 7px 16px; border-radius: 5px;
+      font-size: 13px; cursor: pointer; font-family: 'Poppins', sans-serif;
+    }
+    .card button:hover { background-color: #ff6b7a; }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-box {
+      background: #0d1b2a;
+      width: 90%;
+      height: 85vh;
+      border-radius: 10px;
+      border: 2px solid #e8445a;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .modal-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: #112240;
+      border-bottom: 1px solid #1e3a5f;
+    }
+
+    .modal-topbar span { font-size: 14px; font-weight: 600; color: #e6f1ff; }
+
+    .modal-close {
+      background: #e8445a; color: white; border: none;
+      padding: 5px 12px; border-radius: 5px;
+      font-size: 13px; cursor: pointer;
+    }
+    .modal-close:hover { background: #ff6b7a; }
+
+    .modal-box iframe {
+      width: 100%; flex: 1; border: none;
+    }
+
+   
+    #contact { text-align: center; }
+    #contact p { color: #8892a0; font-size: 15px; line-height: 2.2; }
+    #contact a { color: #e8445a; text-decoration: none; }
+
+   
+    footer {
+      text-align: center; padding: 20px;
+      color: #8892a0; font-size: 13px;
+      border-top: 1px solid #1a2f4a;
+    }
+    footer span { color: #e8445a; }
